@@ -85,3 +85,39 @@ for (let i = 0; i < myArr.length; i++) {
 
     console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}.`);
 }
+
+//////////////////////////////////////////////////////
+
+// 6. Cracking the code
+
+const cipher = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+  allOthers: ' '
+}
+
+function decodeWord(word) {
+  let firstLetter = word.charAt(0);
+  if (firstLetter in cipher) {
+      return word.charAt(cipher[firstLetter]);  
+   }
+  else {
+      return cipher.allOthers;
+  }
+}
+
+function decode(text) {
+  let wordList = text.split(' ');
+  let solution = '';
+  for (let i = 0; i < wordList.length; i++) {
+      solution = solution + decodeWord(wordList[i]);
+  }
+  return solution;
+}
+console.log (decode('craft block argon meter bells brown croon droop'));
+
+/////////////////////////////////////////////
+
+//7. Factory Functions with LOTR
