@@ -34,3 +34,8 @@ for (let key in object) {
 
 //3. Arrays in objects
 
+const myObj = {
+    meals: ['breakfast', 'second breakfast', 'elevenses',
+     'lunch', 'afternoon tea', 'dinner', 'supper'],
+};
+console.log(myObj.meals[3]);
