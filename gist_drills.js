@@ -39,3 +39,34 @@ const myObj = {
      'lunch', 'afternoon tea', 'dinner', 'supper'],
 };
 console.log(myObj.meals[3]);
+
+/////////////////////////////////////////////////
+
+//4. Arrays of objects
+
+const myArr = [
+    {
+        name: 'Jon',
+        jobTitle: 'Boss',
+    },
+    {
+        name: 'James',
+        jobTitle: 'VP',
+    },
+    {
+        name: 'Rich',
+        jobTitle: 'Teacher',
+    },
+    {
+        name: 'Juancarlos',
+        jobTitle: 'Mentor',
+    },
+    {
+        name: 'Butch',
+        jobTitle: 'Butcher',
+    }
+ ];
+
+ for (let i = 0; i < myArr.length; i++) {
+    console.log(`This is my name: ${myArr[i].name} and this my job: ${myArr[i].jobTitle}!`)
+ }
