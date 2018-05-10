@@ -158,9 +158,27 @@ let characters = [
 
 characters.push(createCharacters('Arwen Undomiel', 'Jon', 'Half-Elf', 'Rivendell', 100, 200));
 
-characters.forEach(function (item){
-  console.log(item);
+// characters.forEach(function (item){
+//   return (item);
+// });
+
+characters.find(function(character){
+  if (character.nickname === 'Aragorn') {
+    return character.describe();
+  }
 });
 
-//console.log(gandalf.describe());
-//console.log(bilbo.evaluateFight(gandalf));
+characters.filter(function(character){
+  if (character.race === 'Hobbit') {
+    return character;
+    
+  }
+});
+
+characters.filter(function(character){
+  if (character.attack > 5) {
+    return character;
+  }
+});
+
+
