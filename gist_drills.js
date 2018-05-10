@@ -147,8 +147,20 @@ and you receive ${(character.attack - this.defence < 0) ? 0: character.attack - 
     },
   } 
 }
-const gandalf = createCharacters('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6);
-const bilbo = createCharacters('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1);
+
+let characters = [
+  createCharacters('Gandalf the White', 'Gandalf', 'Wizard', 'Middle Earth', 10, 6),
+  createCharacters('Bilbo Baggins', 'Bilbo', 'Hobbit', 'The Shire', 2, 1),
+  createCharacters('Frofo Baggins', 'Frodo', 'Hobbit', 'The Shire', 3, 2),
+  createCharacters('Aragorn son of Arathorn', 'Aragorn', 'Man', 'Dunnedain', 6, 8),
+  createCharacters('Legolas', 'Legolas', 'Elf', 'Woodland Realm', 8, 5)
+];
+
+characters.push(createCharacters('Arwen Undomiel', 'Jon', 'Half-Elf', 'Rivendell', 100, 200));
+
+characters.forEach(function (item){
+  console.log(item);
+});
 
 //console.log(gandalf.describe());
-console.log(bilbo.evaluateFight(gandalf));
+//console.log(bilbo.evaluateFight(gandalf));
